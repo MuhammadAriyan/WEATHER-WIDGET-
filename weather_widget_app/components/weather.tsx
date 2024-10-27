@@ -23,7 +23,7 @@ const Weather = () => {
   let [weatherDetails, setWeatherDetails] = useState<typeOfWeather>(null);
   let [Msgicon, setMsgicon] = useState<JSX.Element | null>(null);
 
-  const apiKey = 'aeb45b1ccd3f4a1680f92912241008';
+  const apiKey = process.env.API_KEY
 
   async function getData(params: string) {
     try {
